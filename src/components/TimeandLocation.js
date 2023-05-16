@@ -1,15 +1,18 @@
 import React from "react";
+import { formatToLocalTime } from "../logics/weatherlogic";
 
-function TimeandLocation() {
+function TimeandLocation({ weather: { dt, timezone, name, country } }) {
   return (
     <>
       <div className="flex items-center justify-center my-6">
         <p className="text-white text-xl font-extralight">
-          Sunday, 14 May 2023 | Local Time: 13:59 PM
+          {formatToLocalTime(dt, timezone)}
         </p>
       </div>
       <div className="flex items-center justify-center my-3">
-        <p className=" text-white text-3xl font-medium">Patna, Bihar</p>
+        <p className=" text-white text-3xl font-medium">
+          {`${name}, ${country}`}
+        </p>
       </div>
     </>
   );
