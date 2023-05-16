@@ -2,6 +2,9 @@
 
 Build and Deployed Weather Application using ReactJs.
 
+##Deployed Site
+Open [https://praweather.netlify.app](https://praweather.netlify.app/)
+
 In the project directory, you can run:
 
 ### `npm start`
